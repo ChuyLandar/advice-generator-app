@@ -16,23 +16,48 @@
     --dark-blue: hsl(218, 23%, 16%);
 }
 
-body{
+
+body {
     font-family: "Manrope";
     background-color: var(--dark-blue);
+    height: 100vh;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
 }
 
-.card{
+.card {
     background-color: var(--dark-grayish-blue);
+    width: 606px;
+    padding: 3rem;
+    padding-bottom: 4.3rem;
+    border-radius: 15px;
+    position: relative;
 }
 
-.advice-title{
+.advice-title {
     color: var(--neon-green);
+    text-align: center;
+    letter-spacing: 5px;
+    font-size: 0.85rem;
 }
 
-.advice-text{
+.advice-text {
     color: var(--light-cyan);
     font-size: 1.75rem;
     font-weight: 800;
+    text-align: center;
+    margin: 2rem;
+}
+
+.divider{
+    text-align: center;
+}
+
+.mobile-divider{
+    display: none;
+    text-align: center;
 }
 
 .dice-button {
@@ -44,6 +69,20 @@ body{
     justify-content: center;
     align-items: center;
     border-radius: 50%;
+    position: absolute;
+    bottom: -32px;
+    left: 271px;
+}
+
+.dice-button:hover{
+    box-shadow: 0px 0px 34px 1px var(--neon-green);
+    cursor: pointer;
+}
+
+footer{
+    position: absolute;
+    bottom: 0;
+    color: var(--neon-green);
 }
 
 .attribution { 
@@ -52,5 +91,45 @@ body{
 }
 
 .attribution a { 
-    color: hsl(228, 45%, 44%); 
+    color: var(--light-cyan); 
+}
+
+@media (max-width: 607px){
+    .divider{
+        display: none;
+    }
+
+    .mobile-divider{
+        display: block;
+    }
+
+    .card {
+        background-color: var(--dark-grayish-blue);
+        width: 90%;
+        padding: 3rem 0 4.3rem;
+        border-radius: 15px;
+        position: relative;
+    }
+
+    .advice-text {
+        color: var(--light-cyan);
+        font-size: 1.5rem;
+        font-weight: 800;
+        text-align: center;
+        margin: 2rem;
+    }
+
+    .dice-button {
+        background-color: var(--neon-green);
+        width: 64px;
+        height: 64px;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        position: absolute;
+        bottom: -32px;
+        left: 42%;
+    }
 }

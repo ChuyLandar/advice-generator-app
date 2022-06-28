@@ -18,11 +18,11 @@ async function getAdvice(){
 
 diceButton.addEventListener("click", () => {
     getAdvice().then(advice => {
-        adviceTitle.innerHTML = `ADVICE #${advice.id}`;
-        adviceText.innerHTML = advice.advice; 
+        adviceTitle.innerText = `ADVICE #${advice.id}`;
+        adviceText.innerText = `"${advice.advice}"`; 
     }).catch(error =>{
-        adviceTitle.innerHTML = `ADVICE #Error`;
-        adviceText.innerHTML = error.message;
+        adviceTitle.innerText = `ADVICE #Error`;
+        adviceText.innerText = error.message;
     });
 });
 
